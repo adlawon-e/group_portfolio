@@ -42,13 +42,11 @@ nav a {
 nav a:hover {
     background: rgba(59, 130, 246, 0.1);
     color: #60a5fa;
-    transform: translateY(-1px);
 }
 
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0c4a6e 100%);
-    color: white;
     padding: 8rem 2rem;
     text-align: center;
     min-height: 100vh;
@@ -70,8 +68,6 @@ nav a:hover {
 
 .grid-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background-image: 
@@ -100,7 +96,6 @@ nav a:hover {
     background: linear-gradient(135deg, #3b82f6, #0ea5e9);
     top: 10%;
     left: 10%;
-    animation-delay: 0s;
 }
 
 .shape-2 {
@@ -141,8 +136,6 @@ nav a:hover {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    position: relative;
-    animation: fadeInUp 1s ease;
     letter-spacing: 2px;
 }
 
@@ -151,7 +144,6 @@ nav a:hover {
     color: #cbd5e1;
     margin-bottom: 1.5rem;
     font-weight: 600;
-    animation: fadeInUp 1s ease 0.2s backwards;
 }
 
 .hero-description {
@@ -162,7 +154,6 @@ nav a:hover {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    animation: fadeInUp 1s ease 0.4s backwards;
 }
 
 .hero-stats {
@@ -170,7 +161,6 @@ nav a:hover {
     justify-content: center;
     gap: 3rem;
     margin-bottom: 3rem;
-    animation: fadeInUp 1s ease 0.6s backwards;
 }
 
 .stat-item {
@@ -201,12 +191,28 @@ nav a:hover {
     gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
-    animation: fadeInUp 1s ease 0.8s backwards;
 }
 
-.btn-glow {
+/* Buttons */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 0.9rem 2.2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #0ea5e9 100%);
+    color: white;
     box-shadow: 0 8px 32px rgba(59, 130, 246, 0.4);
     animation: pulse 2s ease-in-out infinite;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(59, 130, 246, 0.6);
 }
 
 @keyframes pulse {
@@ -215,14 +221,8 @@ nav a:hover {
 }
 
 .btn-secondary {
-    display: inline-block;
     background: transparent;
     color: #cbd5e1;
-    padding: 0.9rem 2.2rem;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
     border: 2px solid rgba(59, 130, 246, 0.3);
 }
 
@@ -231,28 +231,6 @@ nav a:hover {
     border-color: rgba(59, 130, 246, 0.6);
     transform: translateY(-2px);
     color: #60a5fa;
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Container */
@@ -284,7 +262,6 @@ h2::after {
     border-radius: 2px;
 }
 
-/* About Content */
 .about-content {
     max-width: 800px;
     margin: 0 auto 3rem;
@@ -295,7 +272,6 @@ h2::after {
     padding: 2.5rem;
     border-radius: 16px;
     border: 1px solid rgba(59, 130, 246, 0.2);
-    color: #cbd5e1;
 }
 
 /* Grids */
@@ -303,10 +279,9 @@ h2::after {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
 }
 
-/* Cards - Shared Styling */
+/* Cards */
 .member-card, .project-card, .contact-item {
     background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
     border-radius: 20px;
@@ -322,7 +297,6 @@ h2::after {
     box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
 }
 
-/* Member Card Specific */
 .member-image {
     width: 150px;
     height: 150px;
@@ -358,17 +332,6 @@ h2::after {
     line-height: 1.6;
 }
 
-/* Project Card Specific */
-.projects-section, .contact-section {
-    background: rgba(15, 23, 42, 0.4);
-    border-radius: 24px;
-    border: 1px solid rgba(59, 130, 246, 0.1);
-}
-
-.project-card.coming-soon {
-    border: 1px solid rgba(100, 116, 139, 0.3);
-}
-
 .project-icon {
     font-size: 4rem;
     margin-bottom: 1rem;
@@ -401,24 +364,18 @@ h2::after {
     border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
-.btn-primary {
-    display: inline-block;
-    background: linear-gradient(135deg, #3b82f6 0%, #0ea5e9 100%);
-    color: white;
-    padding: 0.9rem 2.2rem;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+/* Projects & Contact Sections */
+.projects-section, .contact-section {
+    background: rgba(15, 23, 42, 0.4);
+    border-radius: 24px;
+    border: 1px solid rgba(59, 130, 246, 0.1);
 }
 
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.4);
+.project-card.coming-soon {
+    border: 1px solid rgba(100, 116, 139, 0.3);
 }
 
-/* Contact Section */
+/* Contact */
 .contact-content {
     max-width: 700px;
     margin: 0 auto;
@@ -434,15 +391,6 @@ h2::after {
     display: grid;
     gap: 1.5rem;
     margin-top: 2rem;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    justify-content: center;
-    padding: 1.5rem;
-    border-radius: 12px;
 }
 
 .contact-item:hover {
@@ -473,11 +421,6 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero {
-        padding: 6rem 1.5rem;
-        min-height: 100vh;
-    }
-    
     .glitch-text {
         font-size: 3rem;
     }
