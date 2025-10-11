@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="app-style.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="circle circle--purple"></div>
+    <div class="circle circle--blue"></div>
+
+    <main class="currency-converter">
+        <!-- Title of the application-->
+        <h1 class="currency-converter_title">Currency Converter</h1>
+
+        <input class="currency-converter_input" placeholder="0" type="number" id="inputSourceCurrency">
+
+        <div class="currency-converter_select-group">
+            <section class="currency-converter_select">
+                <img id="imageSourceCurrency" src="https://flagcdn.com/w640/us.png">
+                <select id="selectSourceCurrency">
+
+                </select>
+            </section>
+            
+            <button id="buttonSwap" class="currency-converter_swap-button">
+                <i class=" bx bx-swap-horizontal"></i>
+            </button>
+
+            <section class="currency-converter_select">
+                <img id="imageTargetCurrency" src="https://flagcdn.com/w640/ph.png">
+                <select id="selectTargetCurrency">
+                </select>
+            </section>
+        </div>
+        <div class="currency-converter_exchange-rate">
+            <span id="exchangeRateText" class="currency-converter_exchange-rate-text">
+                0 USD = 0 PHP
+            </span>
+        </div>
+        <div id="buttonConvert" class="currency-converter_converter-button">Convert</div>
+        <div class="footer">
+            <h5 class="footer-text">Powered By:</h5>
+            <a href="https://app.exchangerate-api.com/">
+                <h5 class="footer-text" >Exchange Rate - API</h5>
+            </a>
+            <h5 class="footer-text">|</h5>
+            <a href="https://flagcdn.com/">
+                <h5 class="footer-text" > Flag CDN</h5>
+            </a>
+            <h5 class="footer-text">|</h5>
+            <a href="https://boxicons.com/">
+                <h5 class="footer-text" > Box Icons</h5>
+            </a>
+        </div>
+    </main>
+
+    <script src="app-script.js" type="module"></script>
+</body>
+
+</html>
